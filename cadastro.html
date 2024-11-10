@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proágua</title>
+    <link rel="stylesheet" type="text/css" href="styles/cadastro.css">
+    <link rel="icon" href="assents/agua.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Proágua</h1>
+        <p>Complete suas informações abaixo:</p>
+
+        <form id="cadastroForm" action="/cadastro" method="POST">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="campo">
+                <label for="confirmarSenha">Confirmar Senha</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+            </div>
+
+            <div class="campo">
+                <label>Gênero</label>
+                <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+                <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+                <label><input type="radio" name="genero" value="outro"> Outro</label>
+            </div>
+
+            <div class="campo">
+                <label for="bairro">Bairro de Cuiabá</label>
+                <select id="bairro" name="bairro" required>
+                    <option value="" disabled selected>Selecione seu bairro</option>
+                    <option value="Jardim Italia">Jardim Italia</option>
+                    <option value="Pedra 90">Pedra 90</option>
+                    <option value="Alphaville">Alphaville</option>
+                    <option value="Jardim Beira Rio">Jardim Beira Rio</option>
+                    <option value="Jardim Monte Líbano">Jardim Monte Líbano</option>
+                    <option value="Ribeirão Da Ponte">Ribeirão Da Ponte</option>
+                    <option value="Parque Residencial Tropical Ville">Parque Residencial Tropical Ville</option>
+                    <option value="Espírito Santo">Espírito Santo</option>
+                    <option value="Verdão">Verdão</option>
+                    <option value="Consil">Consil</option>
+                    <option value="Popular">Popular</option>
+                    <option value="Santa Rosa">Santa Rosa</option>
+                    <option value="Nova Canaã I, II e III">Nova Canaã I, II e III</option>
+                    <option value="Flor da Mata">Flor da Mata (área invadida)</option>
+                    <option value="Doutor Fábio leite I e II">Doutor Fábio leite I e II (atual Santa fé)</option>
+                    <option value="Jardim Florianópolis">Jardim Florianópolis</option>
+                    <option value="Três Barras">Três Barras</option>
+                    <option value="São Mateus">São Mateus</option>
+                    <option value="Dom Bosco">Dom Bosco</option>
+                    <option value="Jardim Aclimação">Jardim Aclimação</option>
+                    <option value="Jardim Leblon">Jardim Leblon</option>
+                </select>
+            </div>
+
+            <button type="submit">Concluir Cadastro</button>
+        </form>
+
+        <p id="mensagemErro" style="color: red; display: none;">As senhas não correspondem!</p>
+    </div>
+ 
+<div id="successModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p id="modalMessage">Cadastro realizado com sucesso!</p>
+    </div>
+</div>
+
+    <script src="cadastro.js"></script>
+
+</body>
+</html>

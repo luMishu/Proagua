@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proágua</title>
+    <link rel="stylesheet" href="styles/denuncia.css">
+    <link rel="icon" href="assents/agua.png" type="image/x-icon">
+</head>
+<body>
+    <header class='cabecalho'>
+        <h1 class="cabecalho_titulo">ProÁgua</h1>
+        <nav class="links_menu">
+            <a class="cabecalho_link" href="index.html">Home</a>
+            <a class="cabecalho_link" href="login.html">Cadastro</a>
+            <a class="cabecalho_link" href="Artigo.html">Artigo</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 >Denuncia contra Desperdicio</h1>
+            <form action="/enviar_denuncia" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email"name = 'email' placeholder="Coloque seu email" required>
+                <label for="Tipo_denuncia"></label>
+                <label for="Tipo_denuncia">Tipo de denuncia:</label>
+                <select name="Tipo_denuncia" id="Tipo_denuncia" required>
+                    <option value="" disabled selected>Selecione o tipo</option>
+                    <option value="vazamento_publico">Vazamento de Água público</option>
+                    <option value="desperdicio_industrial">Desperdicio de Água indústrias </option>
+                    <option value="desperdicio_resindencial">Desperdicio de Água resindecial </option>
+                    <option value="poluimento_agua">Poluimento de água</option>
+                </select>
+                <label for="descricao">Descrição da Denúncia:</label>
+                <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva o problema" required></textarea>
+                <button type="submit">Enviar Denúncia</button>
+
+            </form>
+        </div>
+    </main>
+    
+      
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProÁgua</title>
+    <link rel="stylesheet" type="text/css" href='styles/login.css'>
+    <link rel="icon" href="assents/agua.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Proágua</h1>
+
+        <form id="loginForm" action="/login" method="post">
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        
+            <div class="campo">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+        
+            <button type="submit">Entrar</button>
+        
+            <a href="cadastro.html" class="esqueci-senha">Cadastrar</a>
+        </form>
+        
+    </div>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>Login bem-sucedido!</p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
